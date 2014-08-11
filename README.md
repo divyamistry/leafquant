@@ -1,6 +1,7 @@
-LeafQuant Programs
-=========
+# LeafQuant Programs
 
-LeafQuant-VIGS for analysis of VIGS images
+LeafQuantVIGS for analysis of VIGS imagessx
 
-LeafQuant-T3S for analysis of T3S images
+LeafQuantT3S for analysis of T3S images. This analysis code is split
+into two files to help quantify lots of different sections on an image.
+
