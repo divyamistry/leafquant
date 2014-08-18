@@ -1,7 +1,9 @@
 # LeafQuant Programs
 
-LeafQuantVIGS for analysis of VIGS images.
+### These set of programs were used in (Whigham et.al.) to quantify barley leaf images
 
-LeafQuantT3S for analysis of T3S images. This analysis code is split
-into two files to help quantify lots of different sections on an image. This code is still under development, and might change often.
+There are two programs available for use at the moment: LeafQuant-VIGS and LeafQuant-T3S.
 
+I welcome any comments and issues. Feel free to get in touch with me via GitHub or [Twitter](https://twitter.com/divyamistry).
+
+_**Note:** While LeafQuant-T3S is usable at the moment, it is not in its final form. Use it cautiously for analysis. The final update should be done in not too distant future._
