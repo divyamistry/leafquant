@@ -13,7 +13,7 @@
 %     color contribution of red and blue channel from the green channel twice.
 %     In general, a value of 1 should work fine
 
-function LeafQuant_v1(exprId, repId, cropImageFirst, showHistogram, numOfLeaves, exposureVal)
+function LeafQuantVIGS(exprId, repId, cropImageFirst, showHistogram, numOfLeaves, exposureVal)
 
 %turn off warning for image shown at smaller zoom than 100%
 warning('off','Images:initSize:adjustingMag');
@@ -250,14 +250,15 @@ fclose(csvOutFileId);
 fclose(cmdOutFileId);
 
 % now add the text to respective locations on the result image
-f = figure; imshow(finalImage);
+f = figure('Name','Processed Gray scale Image'); imshow(finalImage);
 %for i=1:numOfLeaves
 %    text(xlocOfLeafNum(i), ylocOfLeafNum, int2str(i), 'Color','white','FontSize',18, 'FontWeight','bold');
 %end
 saveas(f,strcat(imageFullName,'_processed.png'),'png');
 
-% now show the plot of all the medians of leaf discoloration intensities
+% show the plot of all the medians of leaf discoloration intensities
 figure('Name','Median intensities'), scatter((1:numOfLeaves),leafMedians), ylim([0 256]);
+% show the plot of percent leaf discolorations.
 figure('Name','% infected'), scatter((1:numOfLeaves),leafPercentInfected), ylim([0 100]);
 
 % return the warning for image zoom to "on"
