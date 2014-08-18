@@ -2,7 +2,7 @@
 
 ### These set of programs were used in (Whigham et.al.) to quantify barley leaf images
 
-There are two programs available for use at the moment: LeafQuant-VIGS and LeafQuant-T3S.
+There are two programs available for use at the moment: [LeafQuant-VIGS](LeafQuant-VIGS) and [LeafQuant-T3S](LeafQuant-T3S)
 
 I welcome any comments and issues. Feel free to get in touch with me via GitHub or [Twitter](https://twitter.com/divyamistry).
 
