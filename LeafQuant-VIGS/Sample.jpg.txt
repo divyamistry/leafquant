@@ -1,0 +1,2 @@
+LeafQuant launched using: LeafQuantVIGS('Bgh1','B2',1,1,15,1.60)
+Image cropped using rectangle:[  124  1066  2400  1746]

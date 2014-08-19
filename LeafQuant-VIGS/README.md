@@ -16,24 +16,24 @@ There is a sample image, called `Sample.jpg`, included with this program. The im
 
 Steps to get quantification results:
 
-  1. Start MATLAB, and navigate to the `LeafQuant-VIGS` directory.<br/>_Screenshot 1_<br/><br/>
+  1. Start MATLAB, and navigate to the `LeafQuant-VIGS` directory.<br/>![Step 1](images/step1.tiff)<br/><br/>
   2. On the MATLAB console, type the following command, and hit return. <br />
      ```matlab
      
      >> LeafQuantVIGS('Bgh1', 'B2', true, true, 15, 1.6)
      
      ```
-     _Screenshot 2_<br/><br/>
-  3. When the file picker pops up, choose the `Sample.jpg` image file, and click on `Open`. This should open the sample image in a viewer.<br/>_Screenshot 3_<br/><br/>
+     ![Step 2](images/step2.tiff)<br/><br/>
+  3. When the file picker pops up, choose the `Sample.jpg` image file, and click on `Open`. This should open the sample image in a viewer.<br/>![Step 3](images/step3.png)<br/><br/>
   4. Select the region of leaves between the tapes. Once you have selected the area, double click anywhere within that selected region to indicate to LeafQuant that you're done selecting. After you double click, a new image window with just the cropped region should open up. Behind the viewer, you should also see the progress of the LeafQuant as it processes the leaves.
-<br/><br/>_Screenshot 4_<br/><br/>_(Note: This image viewer allows you to select the crop area only once per launch.)_
+<br/><br/>![Step 4a](images/step4a.tiff) ![Step 4b](images/step4b.tiff)<br/><br/>_(Note: This image viewer allows you to select the crop area only once per launch.)_
   5. Once all the leaves are processed, following output will be available. <br/> *Here, \<leafimage_file\> refers to the name of the file chosen in Step 3. In case of my example, that'd be `Sample.jpg`*
     * A `<leafimage_file>.txt` file in the folder where original image was stored. This file has the command along with parameters that were used to do the quantification. This is the command used in _Step 2_.
-    * A window titled _Figure 3: Histogram of infection intensities per leaf_<br/>_Screenshot 5a_<br/><br/>
-    * A window titled _Figure 4: Processed grayscale image_<br/>_Screenshot 5b_<br/><br/>
-    * A window titled _Figure 5: Median intensities_<br/>_Screenshot 5c_<br/><br/>
-    * A window titled _Figure 6: % infected_<br/>_Screenshot 5d_<br/><br/>
-    * The table of quantified image in the console<br/>_Screenshot 5e_<br/><br/>
+    * A window titled _Figure 3: Histogram of infection intensities per leaf_<br/>![Step 5b](images/step5b.tiff)<br/><br/>
+    * A window titled _Figure 4: Processed grayscale image_<br/>![Step 5c](images/step5c.tiff)<br/><br/>
+    * A window titled _Figure 5: Median intensities_<br/>![Step 5d](images/step5d.tiff)<br/><br/>
+    * A window titled _Figure 6: % infected_<br/>![Step 5e](images/step5e.tiff)<br/><br/>
+    * The table of quantified image in the console<br/>![Step 5f](images/step5f.tiff)<br/><br/>
     * The same table available as a `<leafimage_file>.csv` in the folder where original image was stored
     * The output of _Figure 4_ window as a `<leafimage_file>_processed.png` image file in the folder where original image was stored
 
