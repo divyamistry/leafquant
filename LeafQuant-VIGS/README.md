@@ -9,12 +9,12 @@ LeafQuantVIGS requires Mathworks MATLAB and the Image Processing Toolbox. Curren
   * `cropImageFirst` if `true`, the program allows you to select a region of the leaf photograph before processing it. If set to `false`, the program processes the whole photograph.
   * `showHistogram` if `true`, the program outputs a histogram of the discoloration intensities of grayscale image per leaf. If set to `false`, no histogram is displayed.
   * `numOfLeaves` is an integer representing number of leaves in the photograph (or the cropped image if `cropImageFirst` was `true`). <br/> (_Note: This is the number of total leaves in the image. If you have 10 leaves, but only want to quantify 5 of them, the program requires that you crop image to those five leaves, and provide `numOfLeaves` as `5`. This will be automated in the future, but the "belt and suspenders" are needed for now._)
-  * `exposureVal` is a floating point number that manages quantity of non-green color to subtract from the pixels representing leaves. A value between `1.25` and `1.6` generally performs the best. This measure exists to allow corrections between photographs taken from different cameras and lighting conditions. You shouldn't have to change this if the camera, lighting conditions, image brightness, sharpness, etc. are left constant. There are examples of what this value does at the end of this user guide.
+  * `exposureVal` is a floating point number that manages quantity of non-green color to subtract from the pixels representing leaves. A value between `1.25` and `1.6` generally performs the best on our test images. This measure exists to allow corrections between photographs taken from different cameras and lighting conditions. You shouldn't have to change this if the camera, lighting conditions, image brightness, sharpness, etc. are left constant. There are examples of what this value does at the end of this user guide.
 
 ### Sample usage
 There is a sample image, called `Sample.jpg`, included with this program. The image has 15 leaves, and we're interested in quantifying the mid-leaf regions for discoloration. Let's assume that this photograph was a result of an experiment we want to call _Bgh1_, and this is my replicate _B2_ for my own record keeping purposes.
 
-Steps to get quantification results:
+##### Steps to get quantification results:
 
   1. Start MATLAB, and navigate to the `LeafQuant-VIGS` directory.<br/>![Step 1](images/step1.png)<br/><br/>
   2. On the MATLAB console, type the following command, and hit return. <br />
