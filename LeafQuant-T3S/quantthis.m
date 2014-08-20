@@ -1,4 +1,4 @@
-function [str] = quantthis(J, h, exprName)
+function [min_val, pos10, pos25, pos50, pos75, pos90, max_val, mean_val, area_selected, percent] = quantthis(J, h, showProcessedRegions, exposureVal)
 
 % draw an ellipse to indicate where the selection was made
 rectangle('Position',h.getPosition(),'Curvature',[1,1],'EdgeColor','y', 'LineWidth',2);
@@ -35,11 +35,9 @@ end
 % apply mask to the cropped RGB image.
 I = bsxfun(@times, I, cast(I_mask, class(I)));
 
-% display the cropped and masked image
-% figure, imshow(I);
 %% 
 
-exposureVal = 1.5;
+% exposureVal = 1.5;
 % we'll keep adding to finalImage as we process the leaves. We'll start
 % with a blank image. //This may be unnecessary in the long run because for
 % T3S we're not adding a bunch of leaf segments. We're only dealing with
@@ -66,7 +64,9 @@ I_Diff = I_G - (exposureVal * I_gmrpgmb); % this is the image with only
 % Previous two lines: because I got rid of "finalImage" in the beginning
 % of this code section, I'm getting rid of this. Showing I_Diff is enough
 % to show what the resulting gray scale image is.
-% figure, imshow(I_Diff);
+if (showProcessedRegions==true)
+    figure('Name','Processed region'), imshow(I_Diff);
+end
 %% 
 color_bins = 256; %number of bins to put the 256 shades of gray into. 256/color_bins=size of each bin
 
@@ -151,8 +151,9 @@ area_discoloration = sum(I_mask(:)) - background_area_from_crop; %
 percent_discoloration = 100 * (sum(cts(2:end))/area_discoloration);
 
 %% 
-str = sprintf('%20s | %5d %5d %5d %5d %5d %5d %5d %.2f | %5d %.2f',...
-                   exprName, find(xp,1,'first'),pos10,pos25,pos50,pos75,pos90,find(cts,1,'last'),...
-                   mean_discoloration, uint32(area_discoloration), percent_discoloration);
-
+min_val = find(xp,1,'first');
+max_val = find(xp,1,'last');
+mean_val= mean_discoloration;
+area_selected= uint32(area_discoloration);
+percent = percent_discoloration;
 end
