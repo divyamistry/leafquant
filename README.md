@@ -1,6 +1,6 @@
 # LeafQuant Programs
 
-### These set of programs were used in [(Whigham et.al.)]() to quantify barley leaf images
+### These set of programs were used in [(Whigham et.al.)](http://apsjournals.apsnet.org/doi/abs/10.1094/MPMI-02-15-0027-FI) to quantify barley leaf images.
 
 There are two programs available for use at the moment: [LeafQuant-VIGS](LeafQuant-VIGS) and [LeafQuant-T3S](LeafQuant-T3S)
 
